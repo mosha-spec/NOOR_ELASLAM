@@ -27,6 +27,48 @@
   font-style: normal;
   font-weight: 400 600;
   font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Optimistic Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+}
+:where(html) {
+  font-family: "Optimistic", system-ui, sans-serif;
+}
+:where(code, pre, kbd, samp) {
+  font-family: "Optimistic Mono", ui-monospace, monospace;
+}
+</style><style>
+@font-face {
+  font-family: "Optimistic";
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
   src: url("/NOOR_ELASLAM/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
 }
 @font-face {
@@ -504,6 +546,49 @@
 .podcast-card audio{border-radius:8px}
 .podcast-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
 </style>
+
+<style>
+#riwayat .riwaya-text {
+    max-height: 65vh;
+    overflow-y: auto;
+    padding-left: 8px;
+}
+#riwayat .riwaya-text::-webkit-scrollbar {width:6px}
+#riwayat .riwaya-text::-webkit-scrollbar-thumb {background:var(--gold);border-radius:3px}
+</style>
+
+
+<style>
+#riwayat .riwaya-card {
+    background: linear-gradient(135deg,#fdfcf7,#f8f4e8);
+    border: 2px solid var(--gold-light);
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 25px -10px rgba(0,0,0,0.1);
+    position: relative;
+}
+#riwayat .riwaya-card:not(:last-child)::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 24px -22px -22px;
+    opacity: 0.3;
+}
+#riwayat .riwaya-card h3 {
+    font-family: 'Amiri', serif;
+    color: var(--primary-dark);
+    font-size: 24px;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px dashed var(--gold-light);
+}
+#riwayat .tab-content {
+    padding-top: 10px;
+}
+</style>
+
 </head>
 <body>
 
@@ -734,14 +819,332 @@
     </div>
 
     <div class="tabs" id="riwayatTabs">
-        <button class="tab-btn active" data-tab="riwayat-khadija">خديجة</button>
+        <button class="tab-btn active" data-tab="riwayat-khimar">حين ارتديت خماري</button>
+        <button class="tab-btn" data-tab="riwayat-nour">نور بين القلوب</button>
+        <button class="tab-btn" data-tab="riwayat-abuya">أبويا اللي قلبه جامع</button>
+        <button class="tab-btn" data-tab="riwayat-saeed">لما ماما اتجوزت عم سعيد</button>
+        <button class="tab-btn" data-tab="riwayat-youssef">أخويا يوسف</button>
+        <button class="tab-btn" data-tab="riwayat-khadija">خديجة</button>
         <button class="tab-btn" data-tab="riwayat-aisha">عائشة</button>
         <button class="tab-btn" data-tab="riwayat-zainab">زينب</button>
         <button class="tab-btn" data-tab="riwayat-sahaba">الصحابة</button>
         <button class="tab-btn" data-tab="riwayat-hob">حب نبوي</button>
     </div>
 
-    <div class="tab-content active" id="riwayat-khadija">
+    
+    <div class="tab-content active" id="riwayat-khimar">
+        <div class="riwaya-card"><h3>حين ارتديت خماري لأول مرة</h3><div class="riwaya-text" style="white-space:pre-wrap;line-height:2">كنت واقفة قدام المراية الساعة 6:47 الصبح، والطرحة البيج في إيدي عاملة زي حبل مشنقة. مش هزار، كنت حاسة فعلا إنها هتخنقني.
+
+أنا سارة. عندي 17 سنة، في تانية ثانوي، وبقالي ثلاث سنين بلبس الطرحة العادية اللي هي "لفة سريعة ونطلع". ماما كانت مبسوطة، بابا كان ساكت، وأنا كنت فاكرة إن كده خلاص، أنا كويسة.
+
+لحد ما قبل أسبوعين، أبلة إيمان بتاعة الدين في المدرسة، حكت لنا في حصة الفراغ عن أسماء بنت أبي بكر. مش الحكاية بتاعة الهجرة وخلاص، لا، حكت التفصيلة اللي عمري ما سمعتها.
+
+قالت: "أسماء كانت حامل في الشهر التاسع، وشايلة الأكل على ضهرها، وطالعة الجبل في عز الحر عشان توصل لأبوها والنبي. ولما أبو جهل سألها فين أبوكي، ضربها بالقلم على وشها لحد ما وقع قرطها، وما نطقتش."
+
+أنا سمعت القصة دي وأنا باصة في الشباك. حسيت بالقلم على وشي أنا. مش من الوجع، من الخجل. أنا بتخانق مع ماما عشان عايزة ألبس بنطلون مقطع، وهي كانت حامل وبتتضرب عشان دينها.
+
+روحت البيت يومها وفتحت دولابي. طلعت الخمار الأسود بتاع ماما اللي كانت لابساه في عمرة 2019. قماشته تقيلة، طويل لحد الركبة. لبسته قدام المراية.
+
+شكلي كان غريب. وشي بان مدور أكتر، رقبتي اختفت. قلعته بسرعة كأني اتلسعت.
+
+ماما دخلت عليا. "بتعملي إيه؟"
+
+قلت لها وأنا برميه على السرير: "ولا حاجة، بجرب."
+
+بصتلي البصة بتاعتها اللي بتقول "أنا عارفة". قالت: "الخمار مش موضة يا سارة، ده قرار. لما تلبسيه، البسيه عشان ربنا، مش عشان أبلة إيمان."
+
+أنا اتعصبت. "هو انتي فاكراني هلبسه عشان أبلة؟ أنا بس..."
+
+وسكت. أنا بس إيه؟ مش عارفة.
+
+الخناقة الحقيقية بدأت بعدها بيومين. كنت نازلة درس مع صحابي، لابسة جيبة وبلوزة وطرحة ملفوفة على رقبتي. ماما وقفتني على الباب.
+
+"مش هتنزلي كده."
+
+"ليه؟"
+
+"الرقبة باينة."
+
+"يا ماما كل البنات كده!"
+
+"كل البنات مش هيتحاسبوا مكانك."
+
+اتخانقنا. أنا عيطت، هي عيطت، بابا قال "سيبوها براحتها" ومشي. نزلت الدرس وأنا متضايقة، وقعدت طول الحصة أفكر في أسماء. هي كانت بتطلع الجبل وهي حامل، وأنا مش قادرة أغطي رقبتي عشان شكلي؟
+
+بالليل فتحت موبايلي. دخلت على إنستجرام. كتبت "كوني صحابية". لقيت صور بنات زيي، لابسين خمار ملون، حاطين وردة على الطرحة، بيضحكوا. مش شكلهم كئيب ولا قديم. شكلهم... مطمئن.
+
+عملت save لعشر صور.
+
+تاني يوم في المدرسة، صاحبتى الانتيم، جنة، لاحظت إني سرحانة. "مالك؟"
+
+حكيتلها. قالتلي: "انتي عبيطة؟ هتلبسي خمار في تانية ثانوي؟ الولاد هيقولوا عليكي بقيتي شيخة."
+
+الكلمة وجعتني. مش عشان خايفة من الولاد، عشان أنا فعلا كنت خايفة أبقى "الشيخة" بتاعة الفصل. اللي محدش بيكلمها، اللي بيتريقوا عليها.
+
+روحت لأبلة إيمان بعد الحصة. "أنا عايزة ألبسه بس خايفة."
+
+قالتلي جملة واحدة: "أسماء كانت خايفة برضه وهي طالعة الجبل. الخوف مش عيب، العيب إننا نخلي الخوف يقرر مكاننا."
+
+يوم الخميس، قررت. مش هقول لماما، مش هعمل فرح. هلبسه وأنا نازلة المدرسة وخلاص.
+
+صحيت الفجر. اتوضيت وصليت. فتحت الدولاب. طلعت الخمار الأسود بتاع ماما، بس لقيت تحته خمار تاني، بيج فاتح، ماما كانت جايباهولي من سنة ومقلتليش. كأنه كانت مستنياني.
+
+لبسته. قعدت ساعة قدام المراية ألفه. كل مرة يطلع معوج. اتفرجت على فيديو على يوتيوب "لفة خمار تركي للمدرسة". في المرة السابعة، ظبط.
+
+بصيت لنفسي. وشي كان باين، عيني باينة، بس رقبتي وصدري متغطيين. حسيت بحاجة غريبة. مش خنقة. حسيت... إن أنا متغطية. محمية.
+
+نزلت على السلم. قلبي بيدق زي الطبلة. ماما كانت في المطبخ. بصتلي، سابت المعلقة من إيديها، ودمعت.
+
+ما قالتش مبروك. ما قالتش أي حاجة. جت حضنتني حضن طويل. حضن بيقول "أنا كنت مستنياكي".
+
+في الشارع، كنت ماشية وباصة في الأرض. كل خطوة كنت بسمع صوت أسماء في دماغي: "طلعي الجبل."
+
+وصلت المدرسة. أول واحدة شافتني كانت جنة. فتحت بوقها. "إيه ده؟"
+
+"إيه؟"
+
+"انتي... لابسة خمار؟"
+
+"آه."
+
+سكتت ثانيتين، وبعدين قالت: "شكلك حلو على فكرة. بس... متأكدة؟"
+
+هزيت راسي. دخلنا الفصل.
+
+الهمس بدأ. مش تريقة، همس. "سارة لبست خمار". "ليه؟". "عشان بقت شيخة". ولد من ورا قال بصوت واطي: "كانت أحلى من غيره."
+
+الكلمة دي كانت زي السكينة. دخلت الحمام وعيطت. مش عشان زعلانة منه، عشان جزء مني كان لسه عايز يعجب الناس.
+
+طلعت من الحمام، لقيت أبلة إيمان مستنياني. خدتني على جنب. "أول يوم لأسماء بعد الضرب، أبو جهل كان مستنيها تاني يوم عشان يضربها تاني. عارفة عملت إيه؟ طلعت الجبل تاني."
+
+في الفسحة، كنت قاعدة لوحدي. جنة جت قعدت جنبي. طلعت من شنطتها طرحة بيج شبه بتاعتي بالظبط.
+
+"جبتها منين؟"
+
+"من مامتك. كلمتها امبارح بالليل."
+
+"ليه؟"
+
+"عشان... عايزة أجرب أبقى شجاعة زيك."
+
+عيطنا احنا الاتنين وسط الفسحة.
+
+عدى أسبوع. الخمار بقى عادي. مش سهل، بس عادي. الولاد بطلوا يعلقوا. المدرسين بقوا ينادوني "يا أستاذة سارة" بهزار. ماما بقت تصحيني للفجر عشان نصلي سوا.
+
+أصعب لحظة كانت يوم تصوير الفصل. المصور قال "اللي لابسين غوامق يرجعوا ورا". أنا كنت لابسة أسود. رجعت ورا. في الصورة، وشي كان منور. مش عشان الإضاءة، عشان كنت مرتاحة.
+
+في يوم، أبلة إيمان طلبت مني أحكي قصة أسماء في الإذاعة المدرسية. وقفت على المسرح، والخمار مثبت بدبوسين، وإيدي بتترعش. حكيت. حكيت عن الحامل اللي طلعت الجبل. حكيت عن القلم اللي نزل على وشها. حكيت عن القرط اللي وقع.
+
+وأنا بحكي، شفت جنة في أول صف، لابسة الخمار بتاعها، بتعيط. وشفت بنتين تانيين في تالتة ثانوي، كانوا لابسين طرح عادية، بيشدوها على صدرهم.
+
+خلصت. سقفت المدرسة كلها.
+
+بعد الإذاعة، بنت من أولى ثانوي جتلي. "أنا اسمي حبيبة. ممكن توريني لفة الخمار بتاعتك؟"
+
+في البيت، ماما عملتلي كيكة. بابا اللي عمره ما اتكلم في الموضوع، قال وهو بياكل: "شكلك زي أمك يوم فرحنا."
+
+بالليل، قبل ما أنام، فتحت دفتري. كتبت رسالة لأسماء.
+
+"يا أسماء، أنا مش طلعت جبل. أنا بس نزلت السلم بتاع بيتنا. بس كان أصعب جبل في حياتي. القرط بتاعك وقع، وأنا طرحتي كانت هتقع من كتر ما إيدي بتترعش. بس أنا كملت. عشان انتي كملتي. شكرا إنك كنتي شجاعة عشاني قبل 1400 سنة."
+
+قفلت الدفتر. بصيت في المراية. الخمار متعلق على الشماعة. بكرة هلبسه تاني. مش عشان ماما، مش عشان أبلة إيمان، مش عشان جنة.
+
+عشان لما بلبسه، بحس إن أسماء ماشية جنبي في طرقة المدرسة. وإن أنا، سارة بتاعة تانية ثانوي، بقيت جزء صغير من حكاية كبيرة.</div></div>
+    </div>
+    <div class="tab-content" id="riwayat-nour">
+        <div class="riwaya-card"><h3>نور بين القلوب</h3><div class="riwaya-text" style="white-space:pre-wrap;line-height:2">اسمي نور. مش نور اللي في البطاقة، نور اللي ماما سمتها لي عشان كانت بتدعي في كل سجدة "يا رب نور قلبها". عندي 19 سنة، في أولى جامعة أزهر، قسم شريعة. ودي مش قصة حب ولد وبنت، دي قصة حب بين قلبين بنات، أنا و"حبيبة".
+
+حبيبة مش صاحبتي، حبيبة كانت مرايتي.
+
+اتقابلنا أول مرة في مصلى الكلية. أنا كنت داخلة متأخرة، لابسة خمار كحلي ماما كوتهولي الصبح، وشايلة شنطة تقيلة فيها مصحف وكشكول محاضرات وكتاب فقه. المصلى كان زحمة، البنات قاعدين صفوف، وأنا بدور على مكان أحط فيه رجلي.
+
+لقيت بنت في آخر صف، رفيعة، لابسة إسدال بيج، وحاطة شنطتها على جنب كأنها حاجزة مكان لحد. بصتلي وابتسمت ابتسامة صغيرة، وشاورتلي بإيديها "تعالي". قعدت جنبها.
+
+خلصنا صلاة الظهر، لفتلي وقالت: "أنا حبيبة". صوتها واطي بس واضح. قلتلها "نور". سكتنا ثانيتين، وبعدين ضحكنا من غير سبب. الضحكة دي كانت أول خيط نور بين قلبينا.
+
+من اليوم ده بقينا "نور وحبيبة". مش بنفترق. في المحاضرات جنب بعض، في الكافيتيريا بنقسم ساندوتش جبنة، في المكتبة بنذاكر سوا. حبيبة كانت عكسى تماما. أنا بتكلم كتير، هي بتسمع كتير. أنا بتوتر قبل الامتحان، هي بتفتح المصحف وتقرألي "ألا بذكر الله تطمئن القلوب". أنا بحب الألوان الفاتحة، هي بتحب الغوامق. أنا عصبية، هي باردة زي النيل في يناير.
+
+في أول ترم، حبيبة كانت بتغيب كتير. مش كتير أوي، بس يوم في الأسبوع. كنت بسألها "كنتي فين؟" تقول "مشوار". مرة لقيتها داخلة المصلى وعينيها حمرا. قعدت جنبها بعد الصلاة، قلتلها "مالك؟" قالت "مفيش". أنا عارفة "مفيش" بتاعة البنات يعني في ألف حاجة.
+
+في يوم، بعد محاضرة أصول الفقه، كنا ماشيين في الطرقة، حبيبة وقعت. مش اتكعبلت، وقعت بجد. جسمها ساب. جريت عليها، وشها أصفر، وعرقانة. شلتها أنا وبنتين وديناها العيادة. الدكتورة قاست الضغط، قالت واطي. ادتها عصير. وأنا ماسكة إيديها، لقيت إيديها ساقعة تلج.
+
+في الطريق للبيت في الميكروباص، حبيبة كانت ساندة راسها على الشباك. قلتلها "حبيبة، انتي كويسة؟" بصتلي طويل، وبعدين قالت جملة غيرت كل حاجة: "أنا عندي أنيميا البحر المتوسط. ثلاسيميا."
+
+أنا سمعت الكلمة قبل كده في الأحياء في ثانوي، بس عمري ما فهمتها. قالتلي وهي بتبص بره: "دمي مش بيعمل هيموجلوبين كويس. لازم أنقل دم كل 3 أسابيع. عشان كده بغيب."
+
+سكت. مش عشان مش لاقية كلام، عشان الكلام كله كان هيبقى عبيط. قلت "طب وليه مقلتيش؟" قالت "عشان مش عايزة حد يشوفني بعين الشفقة. أنا مش مريضة، أنا بس محتاجة شحن."
+
+من اليوم ده، النور اللي بين قلوبنا بقى ليه اسم: "السر".
+
+بقينا نروح المستشفى سوا. مستشفى الشاطبي في إسكندرية، قسم أمراض الدم. كل 21 يوم، يوم ثلاث، الساعة 8 الصبح. حبيبة تقعد على كرسي، والممرضة تركب الكانيولا في إيديها الرفيعة. أنا كنت بقعد جنبها، أفتح المصحف وأقرأ سورة يس. هي كانت بتحب تسمعها بصوتي، تقول "صوتك بيهديني".
+
+كانت بتتعب في أول نص ساعة، وشها يصفر، وبعدين الدم الجديد يدخل، خدودها تحمر شوية. كنت بجيبلها تمر وعصير قصب من عم محمد اللي تحت المستشفى. كانت تضحك وتقول "انتي بتغذيني كأني فرخة".
+
+في مرة، وهي بتنقل دم، دخلت ممرضة جديدة، شابة، قالت لحبيبة بصوت عالي شوية "معلش يا حبيبتي استحملي، انتو بتوع الثلاسيميا متعودين". الكلمة وجعت حبيبة. بعد ما الممرضة مشيت، لقيت دموع في عينيها. قلتلها "مالك؟" قالت "أنا مش بتاعة حد. أنا حبيبة."
+
+يومها فهمت إن المرض مش أصعب حاجة، أصعب حاجة نظرة الناس.
+
+في نص الترم التاني، بابا حبيبة تعب. جاله جلطة في القلب. حبيبة كانت وحيدة مامتها متوفية من وهي في إعدادي، وعايشة مع باباها وأخوها الكبير اللي مسافر الكويت. باباها دخل العناية. حبيبة انهارت.
+
+أنا كنت بروح لها البيت كل يوم بعد الكلية. بيتها في سيدي بشر، شقة صغيرة دور تالت، ريحة البخور فيها على طول. كنت بطبخ معاها، أغسل مواعين، أذاكر لها المحاضرات اللي فاتتها. في ليلة، باباها كان تعبان أوي، وهي قاعدة جنبه ماسكة المصحف بتقرأ. بصتلي وقالت "نور، أنا خايفة أبقى لوحدي."
+
+مسكت إيديها. قلتلها الآية اللي كانت دايما بتطمني: "إن مع العسر يسرا". قالت "عارفة، بس اليسر بيتأخر". قلتلها "عشان ربنا بيجهزلك نور أكبر."
+
+باباها مات بعد أسبوع. في الجنازة، أنا كنت لابسة إسود وواقفة جنبها ماسكة إيديها. هي ما عيطتش كتير، كانت ساكتة. السكوت أوجع من العياط. بعد الدفن بثلاث أيام، رحنا نزوره في المقابر. حبيبة قعدت على الأرض، حطت إيديها على التراب، وقالت "بابا، أنا هكمل".
+
+رجعنا البيت، لقيت أخوها جه من الكويت. راجل طيب بس مشغول. قالها "هتكملي جامعة من هناك، هاخدك معايا". حبيبة بصتلي، عينيها بتقول "ساعديني". قلتله "حضرتك، حبيبة هنا ليها علاج وليها كلية، مينفعش تسافر". قال "أنا أخوها وأدرى". حبيبة قالت بصوت واطي بس ثابت: "أنا مش هسافر. بابا وصاني أكمل هنا. ونور جنبي."
+
+دي كانت أول مرة تقول "نور جنبي" قدام حد. حسيت قلبي نور.
+
+عدت الأيام. حبيبة بقت تروح المستشفى لوحدها تاني، تقول "مش عايزة أعطلك". كنت بتخانق معاها. في مرة اتخانقنا خناقة كبيرة. قلتلها "انتي مش حملك لوحدك". قالت "وانتي مش ملزمة بيا". قلتلها "أنا مش ملزمة، أنا مختارة". سكتنا يومين. وحشتني. بعتتلها رسالة الساعة 2 بالليل: "ألا بذكر الله تطمئن القلوب؟ قلبي مش مطمن من غيرك." ردت بعد دقيقة: "تعالي بكرة المستشفى، معاد الدم."
+
+روحنا. وهي على الكرسي، قالتلي "عارفة ليه سميت نفسي حبيبة؟ ماما كانت بتقولي قبل ما تموت، خليكي حبيبة الناس، ربنا يحبك". قلتلها "وانتي حبيبة قلبي".
+
+في رمضان اللي فات، قررنا نعمل ختمة سوا. كل يوم بعد التراويح، نتقابل في مصلى الكلية، نقرأ جزء. في اليوم 27، كنا بنقرأ سورة النور. وصلنا لآية "الله نور السماوات والأرض". حبيبة وقفت قراءة، وقالت "نور، انتي عارفة إنك انتي النور بتاعي؟" عيطت. أنا كمان عيطت. قلتلها "وانتي النور اللي بين قلبي وربنا."
+
+في نفس الليلة، حبيبة تعبت أوي. نقل الدم اتأخر عشان بنك الدم مفيهوش فصيلتها O-. قعدت في المستشفى يومين. أنا كنت بايتة معاها على كرسي جنب السرير. الدكتور قال "لازم متبرع". نزلت بوست على جروب الدفعة على فيسبوك من غير ما أقول اسمها: "محتاجين متبرع دم O- لحالة طارئة". في ساعتين، 17 بنت وولد جم المستشفى. حبيبة لما شافت الطابور، عيطت وقالت "أنا عندي عيلة".
+
+في آخر يوم في الامتحانات، حبيبة جابت امتياز. أنا جبت جيد جدا. حضنا بعض في نص الكلية وصرخنا.
+
+الصيف ده، حبيبة بدأت مشروع صغير. سمته "نور بين القلوب". بتعمل أساور خرز مكتوب عليها آيات، والفلوس بتروح لبنك الدم للأطفال اللي عندهم ثلاسيميا. أول أوردر جالنا كان من بنت في أسوان عندها نفس المرض. حبيبة كتبتلها: "انتي مش لوحدك. في نور بين قلوبنا."
+
+امبارح، كنا قاعدين على البحر في ستانلي. حبيبة طلعت خاتم فضة محفور عليه "نور". قالتلي "عشان لما أكون في المستشفى تفتكري إن في حد بيحبك". قلتلها "نور على نور. انتي النور الأول، وأنا التاني."
+
+"الله نور السماوات والأرض... نور على نور يهدي الله لنوره من يشاء." </div></div>
+    </div>
+    <div class="tab-content" id="riwayat-abuya">
+        <div class="riwaya-card"><h3>أبويا اللي قلبه جامع</h3><div class="riwaya-text" style="white-space:pre-wrap;line-height:2">أنا اسمي مريم، عندي 22 سنة. لو سألتني مين بطلي الخارق، مش هقول سوبرمان، هقول أبويا.
+
+أبويا اسمه عم أحمد، سواق تاكسي، عنده 58 سنة، ضهره محني من كتر القعدة، وإيديه خشنة من الدركسيون. أمي اسمها فاطمة، عندها 54، وعندها سكر وضغط وقلب تعبان.
+
+أبويا مش راجل غني، ومش متعلم، واخد إعدادية بالعافية. بس قلبه... قلبه جامع كبير يساع الدنيا كلها.
+
+الحكاية بدأت وأنا في 3 إعدادي. أمي تعبت فجأة، وقعت في المطبخ. جرينا بيها المستشفى، الدكتور قال "جلطة صغيرة في القلب، ولازم قسطرة ودعامة، وتاخد بالكم من السكر". التكلفة كانت 28 ألف جنيه. سنة 2016، الرقم ده كان تمن عربية.
+
+أبويا ما قالش "منين". قال "حاضر". باع التاكسي اللي كان شريكه فيه. باعه بنص التمن عشان مستعجل. رجع البيت بالفلوس في كيس بلاستيك أسود، حطهم على ترابيزة أمي وقالها "هتبقي كويسة يا فاطمة".
+
+أمي عملت العملية. قعدت في العناية 3 أيام. أبويا كان بينام على كرسي بلاستيك قدام الباب. مكنش بيروح، كنت أنا بجيبله أكل من البيت. في اليوم التالت، الممرضة قالتله "يا حاج روح استحمى". قالها "لما هي تفوق".
+
+أمي فاقت. أول حاجة شافتها وشه. قالتله "أحمد، دقنك طولت". ضحك وقالها "عشان بحوشها أبيعها وأجيبلك علاج".
+
+بعدها أبويا اشتغل سواق على تاكسي وردية ليل. من 6 المغرب لـ 6 الصبح. كان يرجع الصبح وشُه أصفر، ياكل لقمة، ينام ساعتين، يقوم يودي أمي للدكتور، يجيب الدوا، يرجع ينام ساعة، ينزل الشغل تاني.
+
+أنا كنت بشوفه بيتكسر. مرة رجع الفجر، لقى أمي صاحية بتتوجع من السكر العالي. شالها على ضهره ونزل بيها 4 أدوار جري، وقف تاكسي، وداها المستشفى. الدكتور زعقله "ليه اتأخرت". أبويا قال "الأسنسير كان عطلان". ما قالش إنه شايلها على ضهره.
+
+المشاكل ما كانتش بس فلوس ومرض. المشاكل كانت في كرامته. أخويا الكبير، محمود، كان في كلية تجارة، واتخرج ومش لاقي شغل. بقى يقعد في البيت ويتخانق. في مرة قال لأبويا "انت ليه بعت التاكسي؟ كنت سبتني أبيعه أنا وافتح مشروع". أبويا سكت. بالليل سمعته بيقول لأمي "أنا مش زعلان إنه بيقول كده، أنا زعلان إنه شايفني فاشل".
+
+أمي كانت تقوله "انت سندنا". كان يرد "أنا مش سند، أنا حبل دايب بس ربنا شاددني".
+
+في 2019، أمي جالها قدم سكري. الدكتور قال لازم بتر صباع. أبويا وقع على الكرسي. أنا أول مرة أشوفه بيعيط. مسك إيد أمي وقالها "سامحيني يا فاطمة، قصرت". أمي طبطبت على راسه وقالتله "انت ما قصرتش، انت شلتني 30 سنة".
+
+يوم العملية، أبويا صام. قلتله "ليه يا بابا؟" قال "عشان ربنا يسمعني". قعد 6 ساعات في الجامع. لما الدكتور قال "تمام"، أبويا سجد على بلاط المستشفى.
+
+بعد البتر، أمي نفسيتها تعبت. بقت تقول "أنا بقيت عالة". أبويا كان كل يوم يجيبلها وردة بلدي بجنيه. يحطها في كوباية مية جنب سريرها. يقولها "الوردة دي عشان انتي لسه أحلى واحدة".
+
+أنا كنت بشوف الحب في التفاصيل. في إنه كان بيغسل لها رجلها بمية دافية. في إنه كان بيحفظ مواعيد الدوا أكتر منها.
+
+في 2021، أنا اتخطبت. خطيبي أهله عايزين فرح كبير. أبويا قال "مقدرش". باع الدبلة الدهب بتاعته اللي لابسها من يوم فرحه. حط الفلوس في ظرف واداهملي وقال "اعملي اللي نفسك فيه يا مريم، بس متكسريش ضهر أبوكي".
+
+يوم الفرح، أبويا لبس بدلة قديمة. وقف على باب القاعة يسلم على الناس. بالليل لقيته قاعد لوحده قالع الجزمة. قلتله "تعبت". قال "التعب يروح لما أشوفك مبسوطة".
+
+النهاردة، أبويا عنده 58 ولسه بيسوق وردية ليل. كل يوم يرجع يبوس راس أمي، يصلي، ينام ساعتين.
+
+امبارح سألته "مش بتتعب؟" قال: "الحب مش إنك ما تتعبش، الحب إنك تتعب وانت راضي. أنا ربنا رزقني بقلب كبير، عشان أشيلكم كلكم جواه. قلبي جامع، ما بيضيقش".
+
+أنا مريم، اتعلمت إن الرجولة إنك تبيع تاكسيك عشان مراتك تعيش، وتشيلها على ضهرك، وتسجد على بلاط مستشفى، وتجيب وردة بجنيه كل يوم.</div></div>
+    </div>
+    <div class="tab-content" id="riwayat-saeed">
+        <div class="riwaya-card"><h3>لما ماما اتجوزت عم سعيد</h3><div class="riwaya-text" style="white-space:pre-wrap;line-height:2">أنا اسمي لجين، 19 سنة. القصة دي عن الراجل اللي أمي حبته بقلب كبير وهو في عز وجعه.
+
+أبويا الحقيقي مات وأنا عندي 6 سنين. حادثة على الصحراوي. ماما كان عندها 32 سنة. قعدت 8 سنين رافضة الجواز. كانت بتقول "أنا اتجوزت مرة وربنا خد حبيبي".
+
+كنا عايشين في بيت جدي. ماما مدرسة عربي.
+
+لما كان عندي 14، جارنا عم سعيد، مراته ماتت بالكانسر. كان عنده 47 سنة، ولدين كبار. كان بيقعد قدام العمارة يشرب شاي.
+
+ماما كانت بتسلم عليه. بعد وفاة مراته بشهرين، شفته بيعيط. ماما طلعتله شاي. من اليوم ده، بقت تنزله شاي كل يوم.
+
+الجيران بدأوا يتكلموا. "أرملة بتروح لأرمل". ماما سمعت وما ردتش. أنا قلتلها "الناس بتتكلم". قالت "الناس بتتكلم لو عملتي خير ولو عملتي شر، فاعملي اللي يرضي ربنا".
+
+عم سعيد بدأ ييجي يصلح الحنفية، يجيب طلبات. كان بيعاملني زي بنته. مرة جابلي كتاب "الأيام". ماما كانت بتبتسم.
+
+المشكلة جت لما طلب إيد ماما. جدي رفض. قال "هتتجوزي واحد قدك؟". ماما قالت "أنا مش بتجوز شاب، أنا بتجوز سند".
+
+أنا كنت ضده. كنت بقول "مش عايزة حد مكان بابا". كنت بعمل مشاكل. عم سعيد كان يستحمل. مرة بيصلح دولابي، قلتله "مش عايزة منك حاجة". قال "أنا مش جاي آخد مكان حد يا لجين، أنا جاي أبقى ضهر زيادة".
+
+اتجوزوا بعد سنة. جواز بسيط. الناس اتكلمت أكتر. ماما كانت تسكت.
+
+أول سنة كانت جحيم. ولاد عم سعيد جم، مرات ابنه قالت لماما "انتي خدتي أبوهم على كبر". ماما عيطت. عم سعيد كلم ابنه "فاطمة مراتي، اللي يزعلها يزعلني". ابنه ما جاش سنتين.
+
+أنا كنت في ثانوية عامة. ليلة امتحان الفيزياء، كنت منهارة. عم سعيد دخل جابلي عصير. قال "أنا عارف إنك مش بتحبيني، بس أنا بحبك عشان انتي بنت فاطمة. وبابا الله يرحمه كان صاحبي". أول مرة أعرف. قالي "باباكي قبل ما يموت قالي لو جرالي حاجة خلي بالك من فاطمة ولجين". عيطت.
+
+من اليوم ده، بدأت أشوفه.
+
+عم سعيد كان عنده سكر. ماما كانت بتظبطله أكله. هو كان بيصحى الفجر يدعيلها "يا رب خليلي فاطمة، دي عوضتني عن سنين الوحدة".
+
+المشكلة التانية جت لما جاله فشل كلوي. بقى يغسل 3 مرات في الأسبوع. ماما كانت بتروح معاه كل مرة، تقعد 4 ساعات جنبه.
+
+في مرة، وهو على المكنة، قال "سيبيني يا فاطمة، أنا هتعبك". ماما مسكت إيده وقالت "انت مش تعب، انت أجر. ربنا بعتك ليا عشان أخد ثواب". عم سعيد عيط.
+
+ولاده رجعوا يطلبوا الورث. قالوله "اكتب الشقة لينا". رفض. قال "الشقة دي لفاطمة ولجين، دول اللي شالوني".
+
+أنا اللي كنت بكرهه، بقيت أنا اللي بغيرله على الجرح. في مرة قالي "يا لجين، أنا خايف أموت واسيب أمك". قلتله "مش هتسيبها، أنا معاها". قال "انتي بنتي".
+
+عم سعيد مات السنة اللي فاتت. في رمضان. صلى العشاء، نام مصحيش. ماما قعدت جنبه تقرأ يس لحد الصبح.
+
+في العزا، ولاده جم يعيطوا. أنا وقفت قلت "أبويا سعيد مش خلف ولدين، خلف قلب كبير علمني يعني إيه حب متأخر".
+
+النهاردة، ماما لسه بتحط كوبايتين شاي كل مغرب، واحدة ليها وواحدة قدام كرسي عم سعيد الفاضي.
+
+أنا لجين، اللي عاشت الحكاية، وبقولكم: اتجوزوا اللي يصونكم، مش اللي الناس هتسقفله.</div></div>
+    </div>
+    <div class="tab-content" id="riwayat-youssef">
+        <div class="riwaya-card"><h3>أخويا يوسف - شاب بقلب كبير</h3><div class="riwaya-text" style="white-space:pre-wrap;line-height:2">أنا اسمي سلمى، عندي 20 سنة. ولو هحكي عن بطل حقيقي في حياتي، مش هحكي عن ممثل ولا لاعب كورة، هحكي عن أخويا يوسف.
+
+يوسف عنده 24 سنة. شاب. مش راجل كبير، مش أب، لسه في أول حياته. بس قلبه... قلبه يشيل بلد.
+
+بابا مات وأنا عندي 15، يوسف كان عنده 19، في تانية كلية هندسة. في يوم وليلة، بقى هو الراجل بتاع البيت.
+
+أول قرار خده: ساب هندسة. مش عشان فاشل، كان جايب امتياز. سابها عشان المصاريف. قال لماما "الكلية دي بتاخد 5 سنين، وأنا محتاج فلوس دلوقتي". ماما عيطت وقالتله "كمل". قالها "هكمل لما سلمى تتخرج".
+
+اشتغل في ورشة موبايلات في شارع عبد العزيز. من 10 الصبح لـ 11 بالليل. كان بيرجع إيده متعورة من المفكات، وعينه حمرا من اللحام. كنت بقوله "تعبان؟" يقولي "لا، ده أنا بلعب بلايستيشن".
+
+المشاكل بدأت لما أنا دخلت ثانوية عامة. دروس خصوصية، كتب، مواصلات. ماما كانت بتشتغل في حضانة بـ 1500 جنيه. يوسف كان بيقبض 3000. كنا بنكمل الشهر بالعافية.
+
+في مرة، مدرس الفيزياء طلب 400 جنيه مذكرة. أنا رجعت البيت عيطت. قلت لماما "مش هروح الدرس". يوسف سمع. بالليل، لقيته بيفتح حصالة صغيرة كان محوش فيها عشان يجيب موبايل جديد. كسرها، طلع 420 جنيه، حطهم في إيدي وقال "روحي بكرة بدري واحجزي".
+
+قلتله "وموبايلك؟" قال "موبايلي شغال، مستقبلك مش هيستنى".
+
+يوسف كان بيحب بنت من الكلية، اسمها نورا. كانوا مخطوبين عرفي بينهم وبين نفسهم، مستنيين يتخرج. لما ساب الكلية، نورا قالتله "أنا مش هقدر استنى واحد بيصلح موبايلات". سابته. يوسف ما حكاش لحد. أنا عرفت من صاحبه. لقيته بالليل قاعد على السطح بيعيط في صمت. قعدت جنبه. قال "مش زعلان عشان سابتني، زعلان عشان كنت فاكر الحب بيستحمل". قلتله "الحب اللي بجد لسه جاي".
+
+من يومها، يوسف بقى كل حياته أنا وماما.
+
+في 3 ثانوي، أنا تعبت وجالي زايدة. عملية طارئة. المستشفى طلبت 7000 جنيه. ماما ما كانش معاها غير 2000. يوسف اتصل بصاحب الورشة، خد سلفة 5000 على مرتبه سنة كاملة. مضى وصل أمانة. عمل العملية. قعد جنبي 3 أيام ما نمش. كان بيأكلني زبادي بإيده.
+
+بعدها بشهر، صاحب الورشة طرده عشان اتأخر في السداد. يوسف لف على 7 ورش. في الآخر اشتغل دليفري بموتوسيكل مستعمل اشتراه بالقسط. كان بيشتغل 14 ساعة في عز الحر والمطرة. مرة عمل حادثة صغيرة، رجله اتفتحت 8 غرز. تاني يوم نزل الشغل عشان القسط.
+
+المشكلة الكبيرة جت لما ماما جالها ورم في الثدي. الدكتور قال "لازم عملية واستئصال". يوسف سمع الكلمة ووشه اتخطف. بس قال "حاضر".
+
+باع الموتوسيكل. باع اللابتوب بتاعه. باع السلسلة الدهب اللي كان بابا سايبهاله. جمع 35 ألف. العملية اتعملت. ماما قعدت شهر في البيت ما بتتحركش. يوسف كان بيطبخ، يغسل، يذاكرلي، ويروح يشتغل بالليل في كشك شاي عشان يجيب فلوس العلاج الكيماوي.
+
+أنا كنت بشوف شب عنده 23 سنة شايل بيت كامل على كتفه. صحابه بيسافروا الساحل، وهو بيغسل مواعين. صحابه بيخطبوا، وهو بيحسب جرعة الكيماوي.
+
+في مرة، كنت بذاكر، لقيته نايم على الكنبة والمصحف على صدره. صحيته، قلتله "قوم نام على السرير". قال "كنت بدعي". قلتله "بتدعي بإيه؟" قال "بدعي ربنا يخليني أشوفك دكتورة، وبعدين ياخدني". ضربته في كتفه وقلتله "ما تقولش كده". ضحك وقال "بهزر يا سلمى، أنا لسه هشيل عيالك".
+
+يوسف اتقدم لبنت جارتنا، آية. بنت طيبة، محجبة، بتشتغل ممرضة. أهلها رفضوا في الأول عشان "مش معاه شهادة". آية قالت لأبوها "أنا مش عايزة شهادة، أنا عايزة راجل". اتخطبوا. الشبكة كانت دبلة فضة. يوسف كان طاير من الفرحة.
+
+يوم خطوبته، لبس قميص أبيض مكوي، وكان حالق دقنه. ماما زغرطت وهي قاعدة على الكرسي. أنا عيطت. مش عشان فرحانة، عشان شفت أخويا أخيرا بيبتسم بجد.
+
+النهاردة، أنا في أولى طب. يوسف عنده 24 سنة، شغال فني صيانة في شركة كبيرة، وبياخد كورس هندسة أونلاين بالليل عشان يرجع يكمل حلمه. وآية لسه مخطوبة له، بتستناه.
+
+امبارح سألته "يا يوسف، انت ليه عملت كل ده؟" كان بيشرب شاي، بصلي وقال: "عشان بابا قبل ما يموت قالي جملة واحدة: خلي بالك من أمك وأختك. أنا ما كنتش فاهم يعني إيه. دلوقتي فهمت. الرجولة مش بالسن، الرجولة بالشيل. وأنا شاب، بس شلت بدري".
+
+أنا سلمى، أخت الشاب البطل. اتعلمت إن مش لازم البطل يبقى عنده 50 سنة ودقن بيضا. ساعات البطل يبقى عنده 24 سنة، لابس تيشرت مقطوع، وراكب موتوسيكل مكسور، وشايل أمه وأخته وخطيبته في قلبه.
+
+لو ربنا رزقني بولد، هسميه يوسف. عشان يبقى شاب بقلب كبير، زي أخويا.</div></div>
+    </div>
+
+    <div class="tab-content" id="riwayat-khadija">
         <div class="riwaya-card"><h3>خديجة.. الحضن الأول</h3><div class="riwaya-text">لم تكن خديجة بنت خويلد رضي الله عنها مجرد زوجة في سيرة النبي محمد ﷺ، بل كانت البداية كلها. وُلدت في بيت شرف وتجارة، وعُرفت في قريش بلقب "الطاهرة" لعفتها وحكمتها، وكانت أرملةً ثريةً تدير قوافل تمتد من مكة إلى الشام. لم تغرها الدنيا، كانت تبحث عن الأمانة قبل الربح. فسمعت عن شاب من بني هاشم يُدعى محمد، صادق لا يكذب، أمين لا يخون، فأرسلت إليه ليتاجر بمالها مع غلامها ميسرة.<br><br>عاد ميسرة مبهوراً: "يا سيدتي، ما رأيت رجلاً أبرك منه، سحابة تظله في الحر، وراهب في صومعة بحيرى يقول إنه نبي آخر الزمان". لم تكن خديجة تبحث عن تاجر، كانت تبحث عن رجل. فأرسلت صديقتها نفيسة تعرض عليه الزواج. وافق محمد ﷺ، وكان عمره خمساً وعشرين، وهي في الأربعين. لم يرَ الناس فارق السن، رأوا توافق الروح.<br><br>عاشت معه خمساً وعشرين سنة، لم يتزوج عليها قط. أنجبت له القاسم وعبد الله وزينب ورقية وأم كلثوم وفاطمة. كان بيتها أول مسجد، وأول مدرسة. وحين حُبب إليه الخلاء، كانت تزوده بالطعام والماء لغار حراء، تصعد الجبل وهي في الخمسين لتطمئن عليه.<br><br>ثم جاءت الليلة التي غيرت العالم. نزل عليه جبريل، فرجع يرجف فؤاده يقول: "زملوني زملوني، دثروني". احتضنته خديجة ولم تسأل "ماذا رأيت؟" بل قالت: "كلا والله لا يخزيك الله أبداً". عددت مناقبه: يصل الرحم، ويصدق الحديث، ويحمل الكل، ويقري الضيف، ويعين على نوائب الحق. ثم أخذته إلى ورقة بن نوفل، فبشره بالنبوة. كانت أول من آمن، أول من توضأ، أول من صلى خلفه.<br><br>جاءت سنوات الحصار في شعب أبي طالب. قريش قاطعت بني هاشم، لا بيع ولا شراء ولا زواج. ثلاث سنوات أكل الناس فيها ورق الشجر. خديجة التي كانت سيدة مكة الغنية، أنفقت كل مالها حتى باعت حليها. كانت تجوع وتطعم محمداً، تمرض وتواسيه. لم تشتكِ يوماً.<br><br>وفي العام العاشر للبعثة، ماتت خديجة، ومات أبو طالب في نفس العام، فسماه النبي عام الحزن. دفنها بيديه في الحجون، ونزل في قبرها وبكاها. لم ينسها قط. بعد الهجرة بسنوات، كانت عائشة تغار فتقول: "ما غرت على امرأة ما غرت على خديجة، لكثرة ذكر النبي لها". فيقول: "إني رزقت حبها". كان إذا ذبح شاة يقول: "أرسلوا بها إلى صديقات خديجة". <br><br>مرة جاءت عجوز إلى بابه، فهش لها وأكرمها، فقالت عائشة: من هذه؟ قال: "كانت تأتينا زمن خديجة، وإن حسن العهد من الإيمان". <br><br>كانت خديجة ترى في محمد ﷺ ما لا يراه تجار قريش. لم تبهرها أمواله لأنه لم يكن غنياً، بل أبهرها صدقه حين أعاد لها مالها كاملاً وزادها بركة. وحين عرضت عليه الزواج، لم تقل "تزوجني لمالي"، بل أرسلت نفيسة تقول: "يا محمد، ما يمنعك أن تتزوج؟" قال: "ما بيدي ما أتزوج به". قالت: "فإن كُفيت ودُعيت إلى الجمال والمال والشرف؟" ففهم أنها تعنيه. هذا أدب الحب: عرضٌ لا يُذل، وقبولٌ لا يتكبر.<br><br>وفي كل محنة، كانت خديجة هي الدرع. يوم اجتمع المشركون ليقتلوه، كانت تخبئه وتطمئنه. يوم عاد من الطائف مجروح القلب، لم تكن موجودة بجسدها فقد ماتت، لكن ذكراها كانت تعزيه. لهذا ظل حبها حياً بعد موتها، لأن الحب الصادق لا يدفنه التراب، بل يزرعه في الجنة.<br><br>خديجة علمتنا أن الحب ليس كلمات في رخاء، بل ثبات في شدة. أن تؤمني برجل حين يكذبه العالم، أن تمولّي دعوته بمالك، أن تكوني له أماً وزوجة وصديقة. لهذا قال عنها جبريل للنبي: "بشر خديجة ببيت في الجنة من قصب، لا صخب فيه ولا نصب". بيتٌ من لؤلؤ، لأنها صنعت له بيتاً من سكينة على الأرض.</div></div>
     </div>
     <div class="tab-content" id="riwayat-aisha">
@@ -2468,5 +2871,19 @@ const observer = new MutationObserver(fixYouTubeIframes);
 observer.observe(document.body,{childList:true,subtree:true});
 </script>
 
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script></body>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const riwayatLink = document.querySelector('a[href="#riwayat"]');
+  if(riwayatLink){
+    riwayatLink.addEventListener('click', function(){
+      setTimeout(()=>{
+        document.getElementById('riwayat').scrollIntoView({behavior:'smooth', block:'start'});
+      },100);
+    });
+  }
+});
+</script>
+
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script></body>
 </html>
