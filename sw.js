@@ -1,52 +1,41 @@
-const CACHE_NAME = 'noor-islam-v2'; // غيرت الاسم عشان نجبر التحديث
-const BASE = '/NOOR_ELASLAM/';
-const urlsToCache = [
-  BASE,
-  BASE + 'index.html',
-  BASE + 'manifest.json',
-  BASE + 'icon-96.png',
-  BASE + 'icon-144.png',
-  BASE + 'icon-180.png',
-  BASE + 'icon-192.png',
-  BASE + 'icon-512.png',
-  BASE + 'fonts/OptimisticAI_VF_Optimized.woff2',
-  BASE + 'fonts/OptimisticMono_W_TextRegular.woff2'
+const CACHE_VERSION = 'noor-v2026-06-25';
+const CORE_ASSETS = [
+  './',
+  './index.html',
+  './manifest.json'
 ];
 
 self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => Promise.all(
-        urlsToCache.map(url => cache.add(url).catch(e => console.log('skip', url)))
-      ))
-  );
   self.skipWaiting();
+  event.waitUntil(
+    caches.open(CACHE_VERSION).then(cache => cache.addAll(CORE_ASSETS))
+  );
 });
 
 self.addEventListener('activate', event => {
   event.waitUntil(
-    caches.keys().then(keys =>
-      Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
-    )
+    caches.keys().then(keys => {
+      return Promise.all(
+        keys.filter(k => k !== CACHE_VERSION).map(k => caches.delete(k))
+      );
+    }).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
+// Network-first Ù„Ù„Ù€ HTMLØŒ Cache-first Ù„Ù„ØµÙˆØ± ÙˆØ§Ù„Ø®Ø·ÙˆØ·
 self.addEventListener('fetch', event => {
-  if (event.request.method !== 'GET') return;
-  event.respondWith(
-    caches.match(event.request).then(cached => {
-      return cached || fetch(event.request).then(res => {
-        if (res && res.status === 200 && res.type === 'basic') {
-          const copy = res.clone();
-          caches.open(CACHE_NAME).then(c => c.put(event.request, copy));
-        }
+  const req = event.request;
+  if (req.mode === 'navigate' || req.headers.get('accept')?.includes('text/html')) {
+    event.respondWith(
+      fetch(req).then(res => {
+        const copy = res.clone();
+        caches.open(CACHE_VERSION).then(c => c.put(req, copy));
         return res;
-      }).catch(() => {
-        if (event.request.destination === 'document') {
-          return caches.match(BASE + 'index.html');
-        }
-      });
-    })
+      }).catch(() => caches.match(req))
+    );
+    return;
+  }
+  event.respondWith(
+    caches.match(req).then(cached => cached || fetch(req))
   );
 });
