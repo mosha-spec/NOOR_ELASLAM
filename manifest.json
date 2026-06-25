@@ -1,10 +1,10 @@
 {
-  "id": "/NOOR_ELASLAM/",
+  "id": "./",
   "name": "نور الإسلام - منصة الإيمان والذكر",
   "short_name": "نور الإسلام",
   "description": "منصة إسلامية شاملة للقرآن، الأحاديث، الأذكار، والتسبيح",
-  "start_url": "/NOOR_ELASLAM/",
-  "scope": "/NOOR_ELASLAM/",
+  "start_url": "./?source=pwa",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#f7f1e5",
   "theme_color": "#5a6b55",
@@ -12,12 +12,12 @@
   "dir": "rtl",
   "lang": "ar",
   "icons": [
-    { "src": "/NOOR_ELASLAM/icon-96.png", "sizes": "96x96", "type": "image/png", "purpose": "any" },
-    { "src": "/NOOR_ELASLAM/icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any" },
-    { "src": "/NOOR_ELASLAM/icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
-    { "src": "/NOOR_ELASLAM/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "/NOOR_ELASLAM/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
-    { "src": "/NOOR_ELASLAM/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
-    { "src": "/NOOR_ELASLAM/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    { "src": "icon-96.png", "sizes": "96x96", "type": "image/png", "purpose": "any" },
+    { "src": "icon-144.png", "sizes": "144x144", "type": "image/png", "purpose": "any" },
+    { "src": "icon-180.png", "sizes": "180x180", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ]
 }
