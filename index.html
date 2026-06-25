@@ -27,14 +27,14 @@
   font-style: normal;
   font-weight: 400 600;
   font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+  src: url("/NOOR_ELASLAM/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
 }
 @font-face {
   font-family: "Optimistic Mono";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+  src: url("/NOOR_ELASLAM/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
 }
 :where(html) {
   font-family: "Optimistic", system-ui, sans-serif;
@@ -48,56 +48,14 @@
   font-style: normal;
   font-weight: 400 600;
   font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
+  src: url("/NOOR_ELASLAM/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
 }
 @font-face {
   font-family: "Optimistic Mono";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
-}
-:where(html) {
-  font-family: "Optimistic", system-ui, sans-serif;
-}
-:where(code, pre, kbd, samp) {
-  font-family: "Optimistic Mono", ui-monospace, monospace;
-}
-</style><style>
-@font-face {
-  font-family: "Optimistic";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Optimistic Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
-}
-:where(html) {
-  font-family: "Optimistic", system-ui, sans-serif;
-}
-:where(code, pre, kbd, samp) {
-  font-family: "Optimistic Mono", ui-monospace, monospace;
-}
-</style><style>
-@font-face {
-  font-family: "Optimistic";
-  font-style: normal;
-  font-weight: 400 600;
-  font-display: swap;
-  src: url("/fonts/OptimisticAI_VF_Optimized.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Optimistic Mono";
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
+  src: url("/NOOR_ELASLAM/fonts/OptimisticMono_W_TextRegular.woff2") format("woff2");
 }
 :where(html) {
   font-family: "Optimistic", system-ui, sans-serif;
@@ -2069,8 +2027,8 @@ function formatHijri(date){
 
 function generateSiyamYear(){
     const today = new Date();
-    const start = new Date(today.getFullYear()-1,0,1);
-    const end = new Date(today.getFullYear()+2,11,31);
+    const start = new Date(); start.setHours(0,0,0,0);
+    const end = new Date(); end.setFullYear(end.getFullYear()+2); end.setMonth(11,31);
     const list = [];
     for(let d=new Date(start); d<=end; d.setDate(d.getDate()+1)){
         const date = new Date(d);
@@ -2079,7 +2037,7 @@ function generateSiyamYear(){
         const gregStr = formatGreg(date);
         const hijriStr = `${h.day} ${HIJRI_MONTHS[h.month-1]} ${h.year}`;
         
-        // فرض: رمضان
+        // فرض: رمضان - أوتوماتيك من اليوم فقط
         if(h.month===9){
             list.push({date:new Date(date),type:'fard',cat:'fard',title:'صيام رمضان - فرض',reason:'شهر رمضان المبارك',greg:gregStr,hijri:hijriStr,weekday:WEEKDAYS[wd]});
             continue;
@@ -2119,12 +2077,52 @@ function generateSiyamYear(){
 
 let SIYAM_DATA = [];
 
+
 function renderSiyamToday(){
     const today = new Date(); today.setHours(0,0,0,0);
     const item = SIYAM_DATA.find(s=>s.date.getTime()===today.getTime());
     const card = document.getElementById('siyamTodayCard');
     if(!card) return;
     const h = getHijri(today);
+    
+    // Find next fasting day
+    const next = SIYAM_DATA.find(s=>s.date.getTime()>today.getTime());
+    
+    let nextHTML = '';
+    if(next){
+        const diffMs = next.date - new Date();
+        const diffDays = Math.ceil(diffMs / (1000*60*60*24));
+        const diffHours = Math.floor((diffMs % (1000*60*60*24)) / (1000*60*60));
+        
+        nextHTML = `
+            <div style="margin-top:18px;padding:16px;background:linear-gradient(135deg,var(--primary-dark),var(--primary));border-radius:12px;color:white">
+                <div style="font-size:13px;opacity:0.9;margin-bottom:6px">⏳ الصيام القادم</div>
+                <div style="font-family:'Amiri',serif;font-size:24px;margin-bottom:4px">${next.title}</div>
+                <div style="font-size:14px;opacity:0.95;margin-bottom:8px">${next.reason}</div>
+                <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;font-size:12px">
+                    <span style="background:rgba(255,255,255,0.2);padding:4px 10px;border-radius:6px">📅 ${next.weekday}</span>
+                    <span style="background:rgba(255,255,255,0.2);padding:4px 10px;border-radius:6px">ميلادي: ${next.date.getDate()} ${GREG_MONTHS[next.date.getMonth()]} ${next.date.getFullYear()}</span>
+                    <span style="background:rgba(255,255,255,0.2);padding:4px 10px;border-radius:6px">هجري: ${next.hijri}</span>
+                    <span style="background:${next.type==='fard'?'#d4af37':'rgba(255,255,255,0.3)'};padding:4px 10px;border-radius:6px;font-weight:700">${next.type==='fard'?'فرض':'سنة'}</span>
+                </div>
+                <div style="margin-top:10px;font-size:26px;font-weight:800;letter-spacing:1px" id="countdownTimer">باقي ${diffDays} يوم ${diffHours} ساعة</div>
+            </div>
+        `;
+        
+        // Update countdown every minute
+        setInterval(()=>{
+            const now = new Date();
+            const ms = next.date - now;
+            if(ms>0){
+                const d = Math.floor(ms/(1000*60*60*24));
+                const h = Math.floor((ms%(1000*60*60*24))/(1000*60*60));
+                const m = Math.floor((ms%(1000*60*60))/60000);
+                const el = document.getElementById('countdownTimer');
+                if(el) el.textContent = `باقي ${d} يوم ${h} ساعة ${m} دقيقة`;
+            }
+        }, 60000);
+    }
+    
     if(item){
         const color = item.type==='fard' ? 'var(--primary-dark)' : 'var(--gold-dark)';
         card.innerHTML = `
@@ -2137,15 +2135,18 @@ function renderSiyamToday(){
                 <span style="background:var(--cream-dark);padding:4px 12px;border-radius:6px">🌙 هجري: ${h.day} ${HIJRI_MONTHS[h.month-1]} ${h.year}</span>
                 <span style="background:${item.type==='fard'?'var(--primary)':'var(--gold)'};color:white;padding:4px 12px;border-radius:6px">${item.type==='fard'?'فرض':'سنة'}</span>
             </div>
+            ${nextHTML}
         `;
     } else {
         card.innerHTML = `
             <div style="font-size:14px;color:var(--gold);font-weight:700;margin-bottom:8px">اليوم • ${formatGreg(today)}</div>
             <div style="font-family:'Amiri',serif;font-size:24px;color:var(--text-light);margin-bottom:6px">لا يوجد صيام مسنون اليوم</div>
             <div style="font-size:13px;color:var(--text-light)">الهجري: ${h.day} ${HIJRI_MONTHS[h.month-1]} ${h.year} • ${WEEKDAYS[today.getDay()]}</div>
+            ${nextHTML}
         `;
     }
 }
+
 
 function renderSiyamLists(){
     const now = new Date();
@@ -2467,5 +2468,5 @@ const observer = new MutationObserver(fixYouTubeIframes);
 observer.observe(document.body,{childList:true,subtree:true});
 </script>
 
-<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script></body>
+<script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script><script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;var a=target.closest?target.closest("a[href]"):null;if(!a||!a.href||!/^https?:\/\//.test(a.href))return;if(a.href.replace(/#.*$/,"")===loc)return;var productId=extractProductId(target)||extractProductId(a);if(!productId)return;e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*")},true)})();</script></body>
 </html>
